@@ -14,7 +14,7 @@ from random_weighted_automaton import *
 
 
 class Automaton(object):
-    def __init__(self, graph, actions, q0=0):
+    def __init__(self, graph, actions, q0=0, nuxmv):
         """
         graph is an igraph graph object
         actions is a dictionary that maps edges to actions
@@ -26,6 +26,7 @@ class Automaton(object):
         :param q0:
         """
 
+        self.nuxmv = nuxmv
         self.graph = graph
         self.graph.vs["label"] = [str(v.index) for v in self.graph.vs]
         self.graph.vs["name"] = [str(v.index) for v in self.graph.vs]
@@ -235,8 +236,8 @@ class Automaton(object):
         """
         # convert graph to nuXmv model
         self.convertToNuXmv(file, x)
-        # nuxmv = "nuXmv"
-        nuxmv = "E:\\Programs\\nuXmv-2.0.0-win64\\bin\\nuXmv.exe"
+        nuxmv = self.nuxmv
+        # nuxmv = "E:\\Programs\\nuXmv-2.0.0-win64\\bin\\nuXmv.exe"
 
         # with open("cmd.txt", 'w') as f:
         #     f.write("read_model -i " + file + "\n")
