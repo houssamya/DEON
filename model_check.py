@@ -14,7 +14,7 @@ from random_weighted_automaton import *
 
 
 class Automaton(object):
-    def __init__(self, graph, actions, q0=0, nuxmv):
+    def __init__(self, graph, actions, nuxmv, q0=0):
         """
         graph is an igraph graph object
         actions is a dictionary that maps edges to actions
