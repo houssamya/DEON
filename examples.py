@@ -8,10 +8,12 @@ from random_weighted_automaton import *
 from model_check import *
 import pickle
 
+nuxmv = "E:\\Programs\\nuXmv-2.0.0-win64\\bin\\nuXmv.exe"
+
 def simpleExperiment():
     graph = pickle.load(open("example.pkl", "rb"))
     k = {0: [3], 1: [0], 2: [6], 3: [1, 4], 4: [7, 5], 5: [2]}
-    g = Automaton(graph, k)
+    g = Automaton(graph, k, nuxmv)
     kn = 1
     gn = deepcopy(g)
     gn = gn.forceKn(kn)
@@ -37,7 +39,7 @@ def originalObligations():
                             0, 0, 0, 0]
     k0 = {0: [0, 13], 1: [1, 2, 14], 2: [3, 4, 15], 3: [6, 7, 16], 4: [8, 17],
           5: [10, 18], 6: [11, 19], 7: [12, 20], 8: [9], 9: [5]}
-    og = Automaton(ograph1, k0)
+    og = Automaton(ograph1, k0, nuxmv)
 
     col_mission0 = og.checkCTL("temp.smv", "EG !(name = 9)")
     print("T0: Collision mission (EG !collision) = ", str(col_mission0))
@@ -108,7 +110,7 @@ def modifiedObligations(safe=True, verbose=False):
           8: [13], 9: [14, 5], 10: [15, 16], 11: [17], 12: [18], 13: [19],
           14: [20], 15: [21]}
 
-    g3 = Automaton(graph3, k3)
+    g3 = Automaton(graph3, k3, nuxmv)
     col_mission3 = g3.checkCTL("temp.smv", "EG !(name = 12)")
     print("T3: Collision mission (EG !collision) = ", str(col_mission3))
 
