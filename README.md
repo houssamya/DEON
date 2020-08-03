@@ -8,10 +8,10 @@ Finite weighted automata are defined as graphs of states and transition relation
 ### Dependencies
 
 This code entails the following dependencies: numpy, igraph, cvxpy, joblib, tqdm, pymdptoolbox.
-igraph (https://igraph.org/python/) is used for graph operations.
-cvxpy (https://www.cvxpy.org/) is used to solve convex optimization problems.
-joblib (https://joblib.readthedocs.io) is used for parallelization.
-tqdm (https://pypi.org/project/tqdm/) adds a CLI progress bar.
-pymdptoolbox (https://pymdptoolbox.readthedocs.io) is used to solve markov decision processes.
+* igraph (https://igraph.org/python/) is used for graph operations.
+* cvxpy (https://www.cvxpy.org/) is used to solve convex optimization problems.
+* joblib (https://joblib.readthedocs.io) is used for parallelization.
+* tqdm (https://pypi.org/project/tqdm/) adds a CLI progress bar.
+* pymdptoolbox (https://pymdptoolbox.readthedocs.io) is used to solve markov decision processes.
 
 This code also relies on the nuXmv model checker (https://es-static.fbk.eu/tools/nuxmv/).
