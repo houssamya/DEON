@@ -5,6 +5,7 @@ This code includes functions to allow for the model checking of automata with sp
 
 Finite weighted automata are defined as graphs of states and transition relations, given weights as edge properties, and prescribed actions via a dictionary of action names and edges. Automata can be model checked for obligations by defining an Obligation object that takes a LTL formula written in the nuXmv language to be converted into a CTL formula for the purposes of checking compliance along all paths. 
 
+### Examples
 The examples.py file includes methods for running examples of this project's capabilities. Make sure you change the path to the nuXmv executable at the start of the file.
 
 ### Dependencies
