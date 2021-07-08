@@ -1,5 +1,6 @@
-# MC-DAU
+# DEON
 ## Model Checking Dominance Act Utilitarianism
+# (A fork of MC-DAU)
 
 This code includes functions to allow for the model checking of automata with specifications in dominance act utilitarian deontic logic.
 
